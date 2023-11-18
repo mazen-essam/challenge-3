@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+/* Colors and Backgrounds */
+
+/* Colors */
+.primary-red {
+   color: hsl(0, 100%, 74%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primary-green {
+   color: hsl(154, 59%, 51%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.accent-blue {
+   color: hsl(248, 32%, 49%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.neutral-dark-blue {
+   color: hsl(249, 10%, 26%);
 }
 
-.App-link {
-  color: #61dafb;
+.neutral-grayish-blue {
+   color: hsl(246, 25%, 77%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Backgrounds */
+.bg-primary-red {
+   background-color: hsl(0, 100%, 74%);
+}
+
+.bg-primary-green {
+   background-color: hsl(154, 59%, 51%) !important;
+}
+
+.bg-accent-blue {
+   background-color: hsl(248, 32%, 49%);
+}
+
+.bg-neutral-dark-blue {
+   background-color: hsl(249, 10%, 26%);
+}
+
+.bg-neutral-grayish-blue {
+   background-color: hsl(246, 25%, 77%);
+}
+button {
+   /* box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.15); */
+}
+form {
+   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.15);
+}
+/* 
+input {
+   width: 100%;
+} */
+dialog {
+   border: none;
+   border-radius: 8px;
+   padding: 2rem;
+   width: 300px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   position: absolute;
+inset: 0px;
+   text-align: center;
+}
+dialog[open] {
+   animation: slide-in-from-top 0.35s ease-out;
+}
+dialog::backdrop {
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slide-in-from-top {
+   0% {
+      transform: translateY(-15%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+@media screen and (max-width: 375px) {
+   .container {
+      /* display: flex;
+      flex-direction: row !important;
+      width: 100% !important;
+      height: auto !important;
+      padding: 0px !important;
+      margin: 0px 10px !important ;
+      flex-wrap: wrap !important; */
+   }
+   body {
+      height: auto !important;
+   }
+}
+.noshadow {
+   box-shadow: none !important;
 }
